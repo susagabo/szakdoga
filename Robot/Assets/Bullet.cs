@@ -9,13 +9,20 @@ public class Bullet : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        speed = 20f;
+        speed = 10f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         rb.velocity = transform.right * speed;
 	}
-    
-    
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+        Destroy(gameObject);
+        
+    }
+
+
 }

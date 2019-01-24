@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class Fight : MonoBehaviour
 {
-    bool isShooting;
+    //bool isShooting;
     public Transform firePoint;
+    Vector3 position;
     public GameObject bullet;
     public Animator animator;
-
+    
+    
     void Shoot()
     {
-        Instantiate(bullet, firePoint.position, firePoint.rotation);
+        position.x = transform.position.x+(float)0.4;
+        position.y = transform.position.y-(float)0.03;
+        Instantiate(bullet, position, firePoint.rotation);
         
     }
 
     void Start()
     {
-
+        
 
     }
 
