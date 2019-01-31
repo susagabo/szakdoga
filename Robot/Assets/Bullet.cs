@@ -14,8 +14,15 @@ public class Bullet : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        rb.velocity = transform.right * speed;
-	}
+        //rb.velocity = transform.right * speed;
+
+        /*
+        if (transform.rotation.y == 0)
+            rb.velocity = transform.right * speed;
+        else
+            rb.velocity = transform.right * speed*(-1);
+        */
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -24,5 +31,15 @@ public class Bullet : MonoBehaviour {
         
     }
 
+    private void LateUpdate()
+    {
+        rb.velocity = transform.right * speed;
 
+        /*
+        if (transform.rotation.y == 0)
+            rb.velocity = transform.right * speed;
+        else
+            rb.velocity = transform.right * speed*(-1);
+        */
+    }
 }
