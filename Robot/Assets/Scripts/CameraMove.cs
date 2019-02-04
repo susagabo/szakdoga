@@ -17,8 +17,8 @@ public class CameraMove : MonoBehaviour
     void LateUpdate()
     {
         //horizontalmove = Input.GetAxisRaw("Horizontal") * Time.deltaTime;
-        
-        transform.position = player.transform.position+horizontalmove;
+
+        transform.position = player.transform.position + horizontalmove;
         //transform.Translate(horizontalmove, 0, 0);
     }
 }
