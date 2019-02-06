@@ -2,24 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAttack : MonoBehaviour
+public class CsotanyAttack : MonoBehaviour
 {
 
-    public GameObject kislegy;
-    public Transform firePoint;
+    public GameObject trutyi;
     Vector3 position;
 
     void Attack()
     {
-        Instantiate(kislegy, position, transform.rotation);
+        position.x = transform.position.x - 1.3f;
+        position.y = transform.position.y + 0.1f;
+        Instantiate(trutyi, position, transform.rotation);
 
     }
+
 
     // Use this for initialization
     void Start()
     {
-        position.x = transform.position.x - 0.5f;
-        InvokeRepeating("Attack", 1, 1);
+        InvokeRepeating("Attack", 1, 3);
     }
 
     // Update is called once per frame
