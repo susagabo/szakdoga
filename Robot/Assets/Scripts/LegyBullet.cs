@@ -6,6 +6,7 @@ public class LegyBullet : MonoBehaviour
 {
 
     public Rigidbody2D rb;
+    //public PlayerHealth hp;
     float speed;
 
     // Use this for initialization
@@ -17,10 +18,12 @@ public class LegyBullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
-        {
             Destroy(gameObject);
 
-        }
+
+
+        if (collision.gameObject.CompareTag("Player"))
+            PlayerHealth.health -= 50;
     }
 
     // Update is called once per frame

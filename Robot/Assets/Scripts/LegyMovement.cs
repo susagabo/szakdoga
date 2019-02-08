@@ -9,15 +9,18 @@ public class LegyMovement : MonoBehaviour
     //public Transform player;
     float force;
     int way=1;
-
+    //Random rnd = new Random();
 
     void Jump()
     {
+        //Random rnd = new Random();
+        force = Random.Range(1,6);
         rb.velocity = Vector2.up * force;
     }
 
     void Move()
     {
+        force = Random.Range(1, 6);
         rb.velocity = Vector2.right * force*way;
         way = way * (-1);
     }
@@ -26,7 +29,7 @@ public class LegyMovement : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        force = 4f;
+        
         InvokeRepeating("Jump", 1, 1.5f);
         InvokeRepeating("Move", 2, 1.5f);
     }

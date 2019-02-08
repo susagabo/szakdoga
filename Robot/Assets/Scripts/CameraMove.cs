@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour
 {
-    Vector3 horizontalmove;
+    Vector3 position;
     public GameObject player;
     //float speed;
     // Use this for initialization
     void Start()
     {
-        horizontalmove = transform.position - player.transform.position;
+        position = transform.position - player.transform.position;
+        transform.TransformVector(position);
+        
+
     }
 
     // Update is called once per frame
@@ -18,7 +21,7 @@ public class CameraMove : MonoBehaviour
     {
         //horizontalmove = Input.GetAxisRaw("Horizontal") * Time.deltaTime;
 
-        transform.position = player.transform.position + horizontalmove;
+        transform.position = player.transform.position + position;
         //transform.Translate(horizontalmove, 0, 0);
     }
 }

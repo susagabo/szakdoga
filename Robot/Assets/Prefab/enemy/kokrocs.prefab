@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 212739641968471492}
   - component: {fileID: 50619117590287158}
   - component: {fileID: 70268567878324378}
+  - component: {fileID: 114366504128600956}
+  - component: {fileID: 114469366259221308}
   m_Layer: 0
   m_Name: kokrocs
   m_TagString: Enemy
@@ -36,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1917160892399542}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.35, y: 0.71, z: 0}
+  m_LocalPosition: {x: 13.5, y: 0.67, z: 0}
   m_LocalScale: {x: 0.46942058, y: 0.46942058, z: 0.46942058}
   m_Children: []
   m_Father: {fileID: 0}
@@ -74,9 +76,34 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.011154343, y: 0.20632756}
-  m_Size: {x: 3.3292816, y: 0.8635926}
+  m_Offset: {x: -0.011154363, y: 0.037346948}
+  m_Size: {x: 3.329282, y: 1.2015556}
   m_Direction: 1
+--- !u!114 &114366504128600956
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1917160892399542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9a11708d222b949ab4bee823ac735e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trutyi: {fileID: 1694900931332014, guid: ac5d4f73ba22a94459924bfbd7f55721, type: 2}
+--- !u!114 &114469366259221308
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1917160892399542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3fe15b1d317f074aad1678474ffd958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 30
+  csotany: {fileID: 1530046477137090, guid: 5634227b7eeadd5438c69721debb8ee7, type: 2}
 --- !u!212 &212739641968471492
 SpriteRenderer:
   m_ObjectHideFlags: 1
