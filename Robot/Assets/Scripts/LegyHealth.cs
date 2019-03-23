@@ -6,6 +6,8 @@ public class LegyHealth : MonoBehaviour
 {
 
     public int health;
+    public GameObject coin;
+    Vector3 position;
 
     // Use this for initialization
     void Start()
@@ -17,7 +19,13 @@ public class LegyHealth : MonoBehaviour
     void Update()
     {
         if (health <= 0)
+        {
             Destroy(gameObject);
+            position.x = transform.position.x;
+            position.y = transform.position.y;
+            Instantiate(coin, position, transform.rotation);
+        }
+            
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

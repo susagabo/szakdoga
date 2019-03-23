@@ -12,6 +12,7 @@ public class Fight : MonoBehaviour
     public GameObject bullet;
     public Animator anim;
     bool isShooting = false;
+    public GameObject loveseffekt;
 
 
     void Shoot()
@@ -44,6 +45,7 @@ public class Fight : MonoBehaviour
 
 
         Instantiate(bullet, position, firePoint.rotation);
+        Instantiate(loveseffekt, position, firePoint.rotation);
 
     }
 

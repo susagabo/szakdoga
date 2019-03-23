@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 70296718919818762}
   - component: {fileID: 50028092181781094}
   - component: {fileID: 114618487372131394}
+  - component: {fileID: 114719002221205824}
   m_Layer: 0
   m_Name: kislegy
-  m_TagString: Bullet
+  m_TagString: BulletEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,6 +91,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 50028092181781094}
+--- !u!114 &114719002221205824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1043926939758732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c7fde312b03824fae7867388630e88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
 --- !u!212 &212184554887715512
 SpriteRenderer:
   m_ObjectHideFlags: 1

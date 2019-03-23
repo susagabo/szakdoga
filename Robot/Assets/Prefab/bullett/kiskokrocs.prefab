@@ -22,11 +22,10 @@ GameObject:
   - component: {fileID: 212991268407701902}
   - component: {fileID: 50709263319710124}
   - component: {fileID: 70990133074041144}
-  - component: {fileID: 114946365571771844}
-  - component: {fileID: 114961458108846320}
+  - component: {fileID: 114257412551434946}
   m_Layer: 0
   m_Name: kiskokrocs
-  m_TagString: Enemy
+  m_TagString: BulletEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,31 +78,18 @@ CapsuleCollider2D:
   m_Offset: {x: -0.011154363, y: 0.037346948}
   m_Size: {x: 3.329282, y: 1.2015556}
   m_Direction: 1
---- !u!114 &114946365571771844
+--- !u!114 &114257412551434946
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1530046477137090}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db9a11708d222b949ab4bee823ac735e, type: 3}
+  m_Script: {fileID: 11500000, guid: 04d5a8cf2f878fa4d911f3f9da40aa72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trutyi: {fileID: 1644861842520252, guid: cc3af1755b2f9e942b5401b0f3b213be, type: 2}
---- !u!114 &114961458108846320
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1530046477137090}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3fe15b1d317f074aad1678474ffd958, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 30
-  csotany: {fileID: 1530046477137090}
+  health: 20
 --- !u!212 &212991268407701902
 SpriteRenderer:
   m_ObjectHideFlags: 1

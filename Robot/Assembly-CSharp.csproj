@@ -63,15 +63,20 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\CameraMove.cs" />
+    <Compile Include="Assets\Scripts\Coin.cs" />
     <Compile Include="Assets\Scripts\CsotanyAttack.cs" />
     <Compile Include="Assets\Scripts\CsotanyBullet.cs" />
     <Compile Include="Assets\Scripts\CsotanyHealth.cs" />
+    <Compile Include="Assets\Scripts\EffectCanceller.cs" />
     <Compile Include="Assets\Scripts\Fight.cs" />
     <Compile Include="Assets\Scripts\Jumper.cs" />
+    <Compile Include="Assets\Scripts\KisCsotanyHealth.cs" />
     <Compile Include="Assets\Scripts\LegyAttack.cs" />
     <Compile Include="Assets\Scripts\LegyBullet.cs" />
+    <Compile Include="Assets\Scripts\LegyBulletHealth.cs" />
     <Compile Include="Assets\Scripts\LegyHealth.cs" />
     <Compile Include="Assets\Scripts\LegyMovement.cs" />
+    <Compile Include="Assets\Scripts\LenyHealth.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Reference Include="UnityEditor.StandardEvents">

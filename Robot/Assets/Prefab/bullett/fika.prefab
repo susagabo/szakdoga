@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114752143429570496}
   m_Layer: 0
   m_Name: fika
-  m_TagString: Bullet
+  m_TagString: BulletEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
