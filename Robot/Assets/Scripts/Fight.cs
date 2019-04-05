@@ -45,7 +45,7 @@ public class Fight : MonoBehaviour
 
 
         Instantiate(bullet, position, firePoint.rotation);
-        Instantiate(loveseffekt, position, firePoint.rotation);
+        //Instantiate(loveseffekt, position, firePoint.rotation);
 
     }
 
