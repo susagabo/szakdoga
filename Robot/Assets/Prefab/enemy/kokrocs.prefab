@@ -104,6 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 30
   csotany: {fileID: 1530046477137090, guid: 5634227b7eeadd5438c69721debb8ee7, type: 2}
+  coin: {fileID: 1900679493154502, guid: b6155f9a86440a24da4bccd679ea47da, type: 2}
 --- !u!212 &212739641968471492
 SpriteRenderer:
   m_ObjectHideFlags: 1

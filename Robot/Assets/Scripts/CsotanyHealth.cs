@@ -7,6 +7,7 @@ public class CsotanyHealth : MonoBehaviour
 
     public float health;
     public GameObject csotany;
+    public GameObject coin;
     Vector3 position;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -38,7 +39,9 @@ public class CsotanyHealth : MonoBehaviour
             //position.x = transform.position.x - 3;
             position.y = transform.position.y + 1;
             Instantiate(csotany, position, transform.rotation);
-            
+
+            Instantiate(coin, position, transform.rotation);
+
         }
 
     }
