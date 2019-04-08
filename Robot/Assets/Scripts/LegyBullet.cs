@@ -7,6 +7,7 @@ public class LegyBullet : MonoBehaviour
 {
 
     public Rigidbody2D rb;
+    bool grounded = false;
     //public Text healthText;
     //public PlayerHealth hp;
     float speed;
@@ -22,7 +23,8 @@ public class LegyBullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
             Destroy(gameObject);
 
-
+        if (grounded == false && collision.gameObject.CompareTag("Ground"))
+            grounded = true;
 
         if (collision.gameObject.CompareTag("Player"))
         {
@@ -31,9 +33,16 @@ public class LegyBullet : MonoBehaviour
         }
     }
 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (grounded == true && collision.gameObject.CompareTag("Ground"))
+            grounded = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = transform.right * speed;
+        if (grounded)
+            rb.velocity = transform.right * speed;
     }
 }

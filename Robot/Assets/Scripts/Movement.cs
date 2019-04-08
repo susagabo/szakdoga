@@ -42,7 +42,7 @@ public class Movement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") && grounded==false)
         {
             grounded = true;
             animator.SetBool("grounded", grounded);

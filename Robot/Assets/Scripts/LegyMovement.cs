@@ -20,7 +20,7 @@ public class LegyMovement : MonoBehaviour
 
     void Move()
     {
-        force = Random.Range(1, 6);
+        force = Random.Range(2, 4);
         rb.velocity = Vector2.right * force*way;
         way = way * (-1);
     }

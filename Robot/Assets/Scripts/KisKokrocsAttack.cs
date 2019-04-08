@@ -9,8 +9,10 @@ public class KisKokrocsAttack : MonoBehaviour {
 
     void Attack()
     {
-        rb.velocity = Vector2.left * force;
+        
         rb.velocity = Vector2.up * force;
+        rb.velocity = Vector2.right * force * (-1) * 2;
+        //Vector2.left
     }
 
 	// Use this for initialization

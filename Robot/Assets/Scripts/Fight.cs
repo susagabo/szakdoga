@@ -25,14 +25,14 @@ public class Fight : MonoBehaviour
 
         if (facing == 0)
         {
-            position.x = transform.position.x + 0.4f;
+            position.x = transform.position.x + 0.5f;
             //Debug.Log("jobb");
         }
         else
         {
             if (facing == (-1))
             {
-                position.x = transform.position.x - 0.4f;
+                position.x = transform.position.x - 0.5f;
                 //Debug.Log("bal");
             }
         }
