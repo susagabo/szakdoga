@@ -14,15 +14,13 @@ public class Movement : MonoBehaviour
     public Animator animator;
     public Rigidbody2D rb;
 
-    public BoxCollider2D col;
-    public BoxCollider2D bcol;
-
 
     void Flip()
     {
         isFacingRight = !isFacingRight;
 
-        transform.Rotate(0, 180, 0);
+        if (!PlayerHealth.isDead)
+            transform.Rotate(0, 180, 0);
 
         //facing.x *= (-1);
         //transform.localScale = facing;
@@ -42,7 +40,7 @@ public class Movement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground") && grounded==false)
+        if (collision.gameObject.CompareTag("Ground") && grounded == false)
         {
             grounded = true;
             animator.SetBool("grounded", grounded);
@@ -66,7 +64,8 @@ public class Movement : MonoBehaviour
         //ugrás
         if (Input.GetButtonDown("Jump") && grounded /*col.IsTouching(bcol)*/)
         {
-            Jump();
+            if (!PlayerHealth.isDead)
+                Jump();
         }
 
         animator.SetBool("jump", isJumping);
@@ -101,7 +100,8 @@ public class Movement : MonoBehaviour
         }
 
         //mozgatás
-        transform.Translate(horizontalmove, 0, 0);
+        if (!PlayerHealth.isDead)
+            transform.Translate(horizontalmove, 0, 0);
 
         //animálás
         animator.SetFloat("speed", Mathf.Abs(horizontalmove));

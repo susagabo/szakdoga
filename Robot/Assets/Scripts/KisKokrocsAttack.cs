@@ -9,10 +9,11 @@ public class KisKokrocsAttack : MonoBehaviour {
 
     void Attack()
     {
-        
+
         rb.velocity = Vector2.up * force;
-        rb.velocity = Vector2.right * force * (-1) * 2;
-        //Vector2.left
+        rb.AddForce(Vector2.left * force, ForceMode2D.Impulse);
+        //rb.velocity = Vector2.right * force * (-1) * 2;
+        //Vector2.
     }
 
 	// Use this for initialization

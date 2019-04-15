@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CoinCounter : MonoBehaviour {
 
-    int coins=0;
+    public static int coins=0;
     public Text coinsText;
 	// Use this for initialization
 	void Start () {

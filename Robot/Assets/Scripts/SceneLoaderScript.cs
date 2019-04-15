@@ -10,14 +10,14 @@ public class SceneLoaderScript : MonoBehaviour {
 		
 	}
 
+    // Update is called once per frame
+    void Update () {
+		
+	}
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Finish"))
             SceneManager.LoadScene(1);
     }
-
-    // Update is called once per frame
-    void Update () {
-		
-	}
 }

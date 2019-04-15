@@ -8,18 +8,18 @@ public class PlayerHealth : MonoBehaviour
 
     public static float health=100;
     float tempHealth=health;
-    bool isDead = false;
+    public static bool isDead = false;
     public Animator anim;
     public Text healthText;
+    public Canvas canvas;
 
 
-    // Use this for initialization
+    
     void Start()
     {
         healthText.text = "Health: " + health;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (health!=tempHealth)
@@ -33,6 +33,20 @@ public class PlayerHealth : MonoBehaviour
 
         if (isDead)
             anim.SetBool("die", isDead);
+
+        if (isDead)
+            DeathScreen();
+    }
+
+    void DeathScreen()
+    {
+        StartCoroutine(Waiter());
+    }
+
+    IEnumerator Waiter()
+    {
+        yield return new WaitForSeconds(3);
+        canvas.enabled = true;
     }
     /*
     private void OnTriggerEnter2D(Collider2D collision)

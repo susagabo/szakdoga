@@ -22,7 +22,6 @@ public class Fight : MonoBehaviour
         facing = (int)firePoint.rotation.y;
         //Debug.Log(facing);
 
-
         if (facing == 0)
         {
             position.x = transform.position.x + 0.5f;
@@ -37,16 +36,11 @@ public class Fight : MonoBehaviour
             }
         }
 
-
-
         //position.x = transform.position.x + (float)0.4;
         position.y = transform.position.y - (float)0.03;
 
-
-
         Instantiate(bullet, position, firePoint.rotation);
         //Instantiate(loveseffekt, position, firePoint.rotation);
-
     }
 
     void Start()
@@ -59,7 +53,8 @@ public class Fight : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Shoot();
+            if (!PlayerHealth.isDead)
+                Shoot();
 
 
             /*
